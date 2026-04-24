@@ -10,46 +10,51 @@
   <div class="container">
 
     <div class="header-container">
-      <img src="img/arrow_back_icon.svg"
+      <img src="img/other_icons/arrow_back_icon.svg"
             style="width: 1.5rem; height: 1.5rem; margin-right: .5em;">
       <p>Payment</p>
     </div>
 
     <!----------------- Delivery Address ----------------->
-
-    <div class="delivery-add-container">
-      <p>Delivery Address</p>
+    <div class="section delivery-add-container">
+      <div class="body-section"><p>Delivery Address</p></div>
 
       <div class="body-section">
-        <div id="delivery-option-home" class="delivery-add-selected">
-          <img src="img/home_icon.svg"
-              style="width: 1.5rem; height: 1.5rem; margin-right: .5em;">
+
+        <label class="delivery-add-selected">
+          <input type="radio" name="delivery" value="home" checked hidden>
+          <img src="img/unselected_icons/home_icon.svg">
           Home
-        </div>
-        <div id="delivery-option-work" class="delivery-add">
-          <img src="img/work_icon.svg"
-              style="width: 1.5rem; height: 1.5rem; margin-right: .5em;">
+        </label>
+
+        <label class="delivery-add">
+          <input type="radio" name="delivery" value="work" hidden>
+          <img src="img/unselected_icons/work_icon.svg">
           Work
-        </div>
-        <div id="delivery-option-other" class="delivery-add">
-          <img src="img/location_icon_black.svg"
-              style="width: 1.5rem; height: 1.5rem; margin-right: .5em;">
+        </label>
+
+        <label class="delivery-add">
+          <input type="radio" name="delivery" value="other" hidden>
+          <img src="img/unselected_icons/location_icon.svg">
           Other
-        </div>
+        </label>
+
       </div>
+
       <div class="body-section">
         <input type="text" class="delivery-add-text">
       </div>
+
     </div>
 
     <!----------------- Payment Method ----------------->
 
-    <div class="payment-method-cont">
+    <div class="section payment-method-cont">
       <div class="body-section"><p>Payment Method</p></div>
 
-      <label class="payment-option">
+      <label class="payment-option-selected">
         <input type="radio" name="payment" value="card" checked>
-        <img src="img/credit_card_icon.svg">
+        <img src="img/unselected_icons/credit_card_icon.svg">
         <div class="payment-option-item">
           <div>Credit/Debit Card</div>
           <div class="description-payment">Pay securely with your card</div>
@@ -58,7 +63,7 @@
 
       <label class="payment-option">
         <input type="radio" name="payment" value="wallet">
-          <img src="img/wallet_icon.svg">
+          <img src="img/unselected_icons/wallet_icon.svg">
           <div class="payment-option-item">
             <div>Digital Wallet</div>
             <div class="description-payment">Apple Pay, Google Pay, Paypal</div>
@@ -68,7 +73,7 @@
 
       <label class="payment-option">
         <input type="radio" name="payment" value="cod">
-          <img src="img/cod_icon.svg">
+          <img src="img/unselected_icons/cod_icon.svg">
           <div class="payment-option-item">
             <div>Cash on Delivery</div>
             <div class="description-payment">Pay when you receive</div>
@@ -79,8 +84,8 @@
     
     <!----------------- Order Summary ----------------->
 
-    <div class="order-summary-cont">
-      <p>Order Summary</p>
+    <div class="section order-summary-cont">
+      <div class="body-section"><p>Order Summary</p></div>
       <div class="order-summary-item">
         <p>Item Total</p>
         <p>$12.99</p>
@@ -100,9 +105,11 @@
       </div>
     </div>
 
-    <button id="place-order-btn">
+    <button class="section" id="place-order-btn">
       Place Order ($17.02)
     </button>
   </div>
+
+  <script src="payment_script.js"></script>
 </body>
 </html>
