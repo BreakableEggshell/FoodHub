@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="payment_style.css">
   <title>Payment</title>
 </head>
 <body>
@@ -105,9 +105,11 @@
       </div>
     </div>
 
-    <button class="section" id="place-order-btn">
-      Place Order ($17.02)
-    </button>
+    <form action="delivery_status.php">
+      <button id="place-order-btn">
+        Place Order ($17.02)
+      </button>
+    </form>
   </div>
 
   <script src="payment_script.js"></script>
